@@ -3,11 +3,12 @@ import time
 import RPi.GPIO as GPIO
 
 GPIO.setmode(GPIO.BOARD)
-GPIO.setup(2, GPIO.OUT)
+GPIO.setup(3, GPIO.OUT)
 
 while True:
-    GPIO.output(2, 0)
+    GPIO.output(3, 0)
     time.sleep(1)
-    GPIO.output(2, 1)
+    GPIO.output(3, 1)
     time.sleep(1)
+GPIO.cleanup()
 exit()
